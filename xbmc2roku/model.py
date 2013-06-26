@@ -14,7 +14,7 @@ def episode(row):
         description=row['c01'].decode('cp1252'), 
         season=row['c12'], 
         episode=row['c13'], 
-        url='http://test/',
+        url='http://localhost:6543/media/%s/%s' % (row['idShow'], row['idEpisode']),
         length=0)
 
 def get_all_shows(db):
